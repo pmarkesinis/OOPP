@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="SplashScreen" maxHeight="800.0" maxWidth="1238.0" minHeight="800.0" minWidth="1238.0" prefHeight="800.0" prefWidth="1238.0" style="-fx-background-color: #D2EC7E;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SplashScreenCtrl">
+    <children>
+        <AnchorPane fx:id="Big" prefHeight="800.0" prefWidth="1238.0"><children>
+        <Button fx:id="joinButton" alignment="CENTER" layoutX="284.415" layoutY="615.0" maxHeight="108.0" maxWidth="247.0" minHeight="108.0" minWidth="247.0" mnemonicParsing="false" onAction="#join" prefHeight="108.0" prefWidth="247.0" styleClass="greenButton" text="Join" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="65.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <padding>
+                <Insets bottom="1.0" />
+            </padding>
+        </Button>
+        <TextField fx:id="usernameInput" layoutX="211.35" layoutY="439.0" maxHeight="115.0" maxWidth="815.83333333333" minHeight="115.0" minWidth="815.83333333333" onKeyPressed="#keyPressed" prefHeight="115.0" prefWidth="815.83333333333" promptText="Enter your name" styleClass="nameTextField">
+            <font>
+                <Font size="60.0" />
+            </font>
+        </TextField>
+        <ImageView fitHeight="178.0" fitWidth="163.0" layoutX="44.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/client.images/earthLogo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="159.0" fitWidth="967.0" layoutX="135.5" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/client.images/energyGameLogo.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="modeText" layoutX="385.0" layoutY="301.0" maxHeight="100.0" maxWidth="514.0" minHeight="100.0" minWidth="514.0" prefHeight="100.0" prefWidth="514.0" text="Single Player">
+            <font>
+                <Font size="73.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="switchAnchorPane" layoutX="185.0" layoutY="320.0" maxHeight="70.0" maxWidth="141.0" minHeight="70.0" minWidth="141.0" onMouseClicked="#switchMode" prefHeight="70.0" prefWidth="141.0" styleClass="backButton">
+            <children>
+                <AnchorPane fx:id="modeOne" layoutX="11.5" layoutY="11.5" maxHeight="47.0" maxWidth="47.0" minHeight="47.0" minWidth="47.0" prefHeight="47.0" prefWidth="47.0" styleClass="frontButton" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="178.0" fitWidth="178.0" layoutX="1011.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/client.images/environmentLogo.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="rulesButton" alignment="CENTER" layoutX="706.875" layoutY="615.0" maxHeight="108.0" maxWidth="247.0" minHeight="108.0" minWidth="247.0" mnemonicParsing="false" onAction="#GameRulesButton" prefHeight="108.0" prefWidth="247.0" styleClass="greenButton" text="Rules" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="65.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <padding>
+                <Insets bottom="1.0" />
+            </padding>
+        </Button>
+      <Text fx:id="alert" fill="RED" layoutX="211.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="815.83333333333">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+            <ImageView fx:id="singlePlayerImageView" fitHeight="108.0" fitWidth="112.0" layoutX="823.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/client.images/singlePlayer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="multiPlayerImageView" fitHeight="77.0" fitWidth="117.0" layoutX="818.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@/client.images/multiPlayer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="AdminButton" alignment="CENTER" layoutX="1116.0" layoutY="19.0" maxHeight="108.0" maxWidth="247.0" minHeight="48.0" minWidth="108.0" mnemonicParsing="false" onAction="#toAdminScreen" prefHeight="48.0" prefWidth="108.0" styleClass="greenButton" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets bottom="1.0" />
+               </padding>
+            </Button>
+    </children>
+</AnchorPane>
+  <AnchorPane fx:id="gameRules" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D2EC7E; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 4; -fx-border-radius: 30;" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="150.0">
+      <children>
+          <Button fx:id="exitButtonRules" alignment="CENTER" layoutX="304.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="60.0" prefWidth="152.0" styleClass="greenButton" text="EXIT" textFill="WHITE" AnchorPane.leftAnchor="324.0" AnchorPane.rightAnchor="324.0" AnchorPane.topAnchor="14.0">
+              <font>
+                  <Font size="36.0" />
+              </font>
+          </Button>
+          <Text fill="#5f5f5f" layoutX="34.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. You get a question" wrappingWidth="448.8033447265625" AnchorPane.leftAnchor="34.0">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="38.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Choose one out of three answers " wrappingWidth="300.39997482299793" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="461.60002517700207">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="34.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. You have 10 seconds to answer" wrappingWidth="284.8033142089846" AnchorPane.leftAnchor="34.0">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="34.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. There are 20 questions in total" wrappingWidth="308.00323486328125">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="422.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. In the game you have three Jokers" wrappingWidth="314.4033203125">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="420.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click a Joker to select it" wrappingWidth="300.39997482299793">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text fill="#5f5f5f" layoutX="422.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. You can react with emojis" wrappingWidth="327.2033386230469">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Text>
+          <Text layoutX="80.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Rules" wrappingWidth="201.0">
+              <font>
+                  <Font name="System Bold" size="34.0" />
+              </font>
+          </Text>
+          <Text layoutX="475.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joker Rules" wrappingWidth="189.8033447265625">
+              <font>
+                  <Font name="System Bold" size="34.0" />
+              </font>
+          </Text>
+          <ImageView fitHeight="127.0" fitWidth="128.0" layoutX="507.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@/client.images/environmentLogo.png" />
+              </image>
+          </ImageView>
+      </children>
+  </AnchorPane>
+      <AnchorPane fx:id="setServerNameAnchorPane" layoutX="219.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D2EC7E; -fx-background-radius: 30; -fx-border-color: black; -fx-border-width: 4; -fx-border-radius: 30;">
+         <children>
+            <Button alignment="CENTER" layoutX="240.0" layoutY="400.0" mnemonicParsing="false" onAction="#exitServerName" prefHeight="70.0" prefWidth="327.0" styleClass="greenButton" text="Show splash screen" textFill="WHITE" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="241.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Button>
+            <TextField fx:id="serverNameTextField" layoutX="112.0" layoutY="282.0" prefHeight="87.0" prefWidth="575.0" promptText="Enter a server name" styleClass="nameTextField" text="localhost:8080">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutY="171.0" prefHeight="100.0" prefWidth="800.0" text="Please enter the server name you want to play on:" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="166.0" fitWidth="721.0" layoutX="40.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/client.images/energyGameLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children></AnchorPane>

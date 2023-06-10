@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="800.0" prefWidth="1238.0" style="-fx-background-color: #D2EC7E;" styleClass="background" stylesheets="@../../client.styles/QuestionScreenStyles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.QuestionCtrl">
+   <children>
+      <ImageView fx:id="mainImage" fitHeight="386.0" fitWidth="683.0" focusTraversable="true" layoutX="65.0" layoutY="296.0" pickOnBounds="true">
+         <image>
+            <Image url="@/client.images/shower.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="questionText" alignment="CENTER" layoutX="179.0" layoutY="16.0" maxHeight="183.0" maxWidth="815.0" minHeight="183.0" minWidth="787.0" prefHeight="183.0" prefWidth="787.0" text="Which of these activities takes more energy?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="25.0" maxHeight="40.0" maxWidth="80.0" minHeight="40.0" minWidth="80.0" mnemonicParsing="false" onAction="#backToSplash" prefHeight="40.0" prefWidth="80.0" styleClass="back_button" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <ImageView fx:id="emojiOne" fitHeight="72.0" fitWidth="72.0" layoutX="14.0" layoutY="703.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/client.images/emojiOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emojiTwo" fitHeight="72.0" fitWidth="72.0" layoutX="100.0" layoutY="703.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/client.images/emojiTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emojiThree" fitHeight="72.0" fitWidth="72.0" layoutX="186.0" layoutY="703.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/client.images/emojiThree.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="singlePlayerSecondsLeft" layoutX="834.0" layoutY="750.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: bold;" text="Time left: 15 seconds" textAlignment="CENTER" visible="false" wrappingWidth="319.9999999999999" />
+      <Text fx:id="multiPlayerSecondsLeft" layoutX="834.0" layoutY="731.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: bold;" textAlignment="CENTER" wrappingWidth="319.9999999999999" />
+      <ImageView fitHeight="124.0" fitWidth="100.0" layoutX="65.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/client.images/earthLogo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="answersGiven" alignment="CENTER" layoutX="318.0" layoutY="712.0" maxHeight="58.0" maxWidth="429.0" minHeight="58.0" minWidth="429.0" prefHeight="58.0" prefWidth="429.0" text="2 / 6 answers">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="threeActivitiesAnchorPane" layoutX="794.0" layoutY="293.0" maxHeight="386.0" maxWidth="400.0" minHeight="386.0" minWidth="400.0" prefHeight="386.0" prefWidth="400.0">
+         <children>
+            <Pane fx:id="answerOnePane" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" onMouseClicked="#answerOneGiven" prefHeight="107.0" prefWidth="400.0" style="    -fx-background-color: #F6FFD3;    -fx-font-size: 30;    -fx-background-radius: 20;    -fx-text-alignment: center;" styleClass="answer_1">
+               <children>
+                  <Label fx:id="answerOne" alignment="CENTER" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" prefHeight="107.0" prefWidth="400.0" text="Label" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="answerTwoPane" layoutY="139.5" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" onMouseClicked="#answerTwoGiven" prefHeight="107.0" prefWidth="400.0" style="    -fx-background-color: #F6FFD3;    -fx-font-size: 30;    -fx-background-radius: 20;    -fx-text-alignment: center;" styleClass="answer_3">
+               <children>
+                  <Label fx:id="answerTwo" alignment="CENTER" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" prefHeight="107.0" prefWidth="400.0" text="Label" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="answerThreePane" layoutY="279.0" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" onMouseClicked="#answerThreeGiven" prefHeight="107.0" prefWidth="400.0" style="    -fx-background-color: #F6FFD3;    -fx-font-size: 30;    -fx-background-radius: 20;    -fx-text-alignment: center;" styleClass="answer_2">
+               <children>
+                  <Label fx:id="answerThree" alignment="CENTER" maxHeight="107.0" maxWidth="400.0" minHeight="107.0" minWidth="400.0" prefHeight="107.0" prefWidth="400.0" text="Label" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="oneActivityAnchorPane" layoutX="794.0" layoutY="293.0" maxHeight="386.0" maxWidth="400.0" minHeight="386.0" minWidth="400.0" prefHeight="386.0" prefWidth="400.0" style="-fx-background-color: #F6FFD3; -fx-background-radius: 20;" visible="false">
+         <children>
+            <Label fx:id="answerOne1" alignment="CENTER" maxHeight="80.0" maxWidth="400.0" minHeight="80.0" minWidth="400.0" prefHeight="80.0" prefWidth="400.0" style="-fx-border-color: gray; -fx-border-width: 0 0 2 0;" text="Enter you answer below">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="answerTwo1" alignment="CENTER" layoutY="236.0" maxHeight="80.0" maxWidth="400.0" minHeight="80.0" minWidth="400.0" prefHeight="80.0" prefWidth="400.0" style="-fx-border-width: 2 0 2 0; -fx-border-color: gray;" text="Boundaries">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <TextField fx:id="answerOneInput" layoutX="7.0" layoutY="113.0" maxHeight="80.0" maxWidth="300.0" minHeight="80.0" minWidth="300.0" onInputMethodTextChanged="#validateInput" onKeyPressed="#clickEnter" onKeyTyped="#validateInput" prefHeight="80.0" prefWidth="223.0" promptText="Enter your answer" styleClass="nameTextField">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </TextField>
+            <Button fx:id="answerGivenActivityOne" layoutX="314.0" layoutY="113.0" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#revealAnswersOneActivities" prefHeight="80.0" prefWidth="80.0" styleClass="back_button" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Text fx:id="lowerBoundary" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From 100" textAlignment="CENTER" wrappingWidth="200.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fx:id="upperBoundary" layoutX="200.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To 400" textAlignment="CENTER" wrappingWidth="200.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="992.0" layoutY="16.0" maxHeight="164.0" maxWidth="229.0" minHeight="135.0" minWidth="229.0" prefHeight="164.0" prefWidth="229.0" styleClass="pointsLabel">
+         <children>
+            <Text fx:id="points" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pointsLabel" text="0 points" textAlignment="CENTER" wrappingWidth="229.33333333333326">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="nameText" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: faldfaewaf" textAlignment="CENTER" wrappingWidth="229.33333333333326">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="gainedPointsAnchorPane" layoutX="10.0" layoutY="87.0" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: lightgray; -fx-background-radius: 13;" visible="false" />
+            <Text fx:id="gainedPoints" layoutX="9.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="210.66670735677076">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Label fx:id="emojiOneLabel" alignment="CENTER" layoutX="5.0" layoutY="620.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Label" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="emojiTwoLabel" alignment="CENTER" layoutX="76.0" layoutY="620.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Label" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="emojiThreeLabel" alignment="CENTER" layoutX="162.0" layoutY="620.0" maxHeight="30.0" maxWidth="120.0" minHeight="30.0" minWidth="120.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Label" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <AnchorPane fx:id="jokersForSinglePlayer" layoutY="199.0" prefHeight="65.0" prefWidth="1238.0" visible="false">
+         <children>
+            <Label layoutX="61.0" maxHeight="65.0" maxWidth="250.0" minHeight="65.0" minWidth="250.0" prefHeight="65.0" prefWidth="250.0" text="Use a Joker!">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Label>
+            <Button fx:id="jokerOneSinglePlayer" layoutX="348.0" maxHeight="65.0" maxWidth="400.0" minHeight="65.0" minWidth="400.0" mnemonicParsing="false" onAction="#jokerOneSinglePlayer" prefHeight="65.0" prefWidth="400.0" styleClass="joker_button" text="Double Points" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="jokerTwoSinglePlayer" layoutX="792.0" maxHeight="65.0" maxWidth="400.0" minHeight="65.0" minWidth="400.0" mnemonicParsing="false" onAction="#jokerTwoSinglePlayer" prefHeight="65.0" prefWidth="400.0" styleClass="joker_button" text="Eliminate one wrong answer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="jokersForMultiPlayer" layoutY="199.0" prefHeight="65.0" prefWidth="1238.0">
+         <children>
+            <Label layoutX="14.0" maxHeight="65.0" maxWidth="250.0" minHeight="65.0" minWidth="194.0" prefHeight="65.0" prefWidth="194.0" text="Use a Joker!">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="jokerOneMultiPlayer" layoutX="219.0" maxHeight="65.0" maxWidth="400.0" minHeight="65.0" minWidth="267.0" mnemonicParsing="false" onAction="#jokerOneMultiPlayer" prefHeight="65.0" prefWidth="267.0" styleClass="joker_button" text="Double Points" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="jokerTwoMultiPlayer" layoutX="509.0" maxHeight="65.0" maxWidth="400.0" minHeight="65.0" minWidth="340.0" mnemonicParsing="false" onAction="#jokerTwoMultiPlayer" prefHeight="65.0" prefWidth="340.0" styleClass="joker_button" text="Eliminate one wrong answer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="jokerThreeMultiPlayer" layoutX="873.0" maxHeight="65.0" maxWidth="400.0" minHeight="65.0" minWidth="267.0" mnemonicParsing="false" onAction="#sendJokerThree" prefHeight="65.0" prefWidth="340.0" styleClass="joker_button" text="Remove time for other players" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ProgressBar fx:id="nope" layoutY="785.0" prefHeight="15.0" prefWidth="1238.0" progress="0.0" />
+      <Label fx:id="jokerUsed" alignment="CENTER" layoutX="557.0" layoutY="281.0" maxHeight="30.0" maxWidth="222.0" minHeight="30.0" minWidth="120.0" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Label" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
